@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('menu/home');
 });
+
+Route::get('/list-pesanan', 'OrderController@index');
+
+
+Route::get('/ajukan-pesanan', 'OrderController@ajukanPesanan');
+Route::post('/ajukan-pesanan', 'OrderController@postAjukanPesanan');
+
+Route::get('/profile-pemesan', 'OrderController@profilePemesan');
+Route::post('/profile-pemesan', 'OrderController@postProfilePemesan');
+
