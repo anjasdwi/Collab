@@ -27,14 +27,14 @@
 						<a class="nav-link" href="/list-pesanan">List Pesanan</a>
 					</li>
 			    </ul>
-		    	<ul class="navbar-nav ml-auto">
+		    	<!-- <ul class="navbar-nav ml-auto">
 				    <li class="nav-item">
 				    	<a class="nav-link" href="https://www.google.com/">
-				    		<button 
-						      	type="button" 
-						      	class="btn" 
+				    		<button
+						      	type="button"
+						      	class="btn"
 						      	style="
-						      		border: 1px solid white; 
+						      		border: 1px solid white;
 						      		background: transparent;
 						      		color: white;"
 						    >
@@ -44,11 +44,11 @@
 				    </li>
 				    <li class="nav-item">
 				      <a class="nav-link" href="https://www.google.com/">
-				    		<button 
-						      	type="button" 
-						      	class="btn" 
+				    		<button
+						      	type="button"
+						      	class="btn"
 						      	style="
-						      		border: 1px solid white; 
+						      		border: 1px solid white;
 						      		background: white;
 						      		color: black;"
 						    >
@@ -56,7 +56,7 @@
 						    </button>
 				    	</a>
 				    </li>
-				 </ul>
+				 </ul> -->
 		  </div>
 		</nav>
 	</header>
@@ -64,15 +64,15 @@
 	<div style="margin-top: 60px; margin-bottom: 60px; margin-right: 16px; margin-left: 16px;">
 		@yield('content')
 	</div>
-	
+
 
 	<!-- <footer>
 		<div align="center" style="background: #343a40!important;">
-			<p 
+			<p
 				style="
-					color: white; 
-					margin: 0; 
-					padding-top: 4px; 
+					color: white;
+					margin: 0;
+					padding-top: 4px;
 					padding-bottom: 6px;
 					font-size: 14px;
 				"

@@ -4,9 +4,9 @@
 
 @section('content')
 	<div align="center">
-		<div 
+		<div
 			style="
-				width: 80%; 
+				width: 80%;
 				background: white;
 				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			"
@@ -17,30 +17,35 @@
 					<h5>List atau Antrian Pesanan</h5>
 					<hr />
 				</div>
-				<div align="center" class="row">
-					<div class="col border">
-						Urutan
+
+				@if(!$order->isEmpty())
+					<div align="center" class="row">
+						<div class="col border">
+							Urutan
+						</div>
+						<div class="col border">
+							Jenis
+						</div>
+						<div class="col border">
+							Jumlah
+						</div>
+						<div class="col border">
+							Pemesan
+						</div>
+						<div class="col border">
+							Pengerjaan
+						</div>
+						<div class="col border">
+							Tanggal Pengerjaan Pesanan
+						</div>
+						<div class="col border">
+							Tanggal Selesai Pesanan
+						</div>
+						<div class="col border">
+							View
+						</div>
 					</div>
-					<div class="col border">
-						Jenis
-					</div>
-					<div class="col border">
-						Jumlah
-					</div>
-					<div class="col border">
-						Pemesan
-					</div>
-					<div class="col border">
-						Pengerjaan
-					</div>
-					<div class="col border">
-						Proses
-					</div>
-					<div class="col border">
-						View
-					</div>
-				</div>
-				@foreach($order as $index => $pesanan)
+					@foreach($order as $index => $pesanan)
 					<div align="center" class="row">
 						<div class="col border">
 							{{ $index + 1 }}
@@ -58,14 +63,20 @@
 							{{ $pesanan->proses_pengerjaan . " Hari" }}
 						</div>
 						<div class="col border">
-							{{ $pesanan->status }}
+							{{ $pesanan->tgl_ajukan_pesanan }}
+						</div>
+						<div class="col border">
+							{{ $pesanan->tgl_selesai_pesanan }}
 						</div>
 						<div class="col border">
 							<a href="#">Detail</a>
 						</div>
 					</div>
-				@endforeach
-				
+					@endforeach
+				@else
+					<p>Belum ada pesanan</p>
+				@endif
+
 			</div>
 		</div>
 	</div>
